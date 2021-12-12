@@ -12,3 +12,4 @@ This is a simple private chatting app made in nodejs.
 
 # Test the app here:
 # <a href="https://private-chat-app-nodejs.herokuapp.com/" target="_blank">https://private-chat-app-nodejs.herokuapp.com/</a>
+[test](https://private-chat-app-nodejs.herokuapp.com/){:target="_blank"}
