@@ -18,20 +18,24 @@ document.getElementById('btnToId').onclick = () => {
 
 const displayMessage = (sender, body) => {
   const el = document.createElement("li");
-  el.innerHTML = `${sender} said: ${body}`;
-  el.style.fontSize = "24pt";
-  document.querySelector("ul").appendChild(el);
+  el.innerHTML = `<div class="user">${sender}</div><div class="text">${body}</div>`;
+  el.classList.add("chat")
+  const ul = document.querySelector("ul");
+  ul.appendChild(el);
+  ul.lastChild.scrollIntoView();
 }
 document.getElementById('btnSend').onclick = () => {
+  const msgint = document.getElementById('msg');
   const message = {
-    body: document.getElementById('msg').value,
+    body: msgint.value,
     receiver: toId,
     sender: fromId
   }
   if (message.body !== '' && toId !== '' && fromId !== '') {
-    document.getElementById('msg').value = ''
+    msgint.value = ''
     socket.emit('message', message);
     displayMessage('You', message.body)
+    msgint.focus();
   } else if (message.body !== '')
     alert("ID cannot be blank")
 }

@@ -25,7 +25,7 @@ io.on('connection', (socket) => {
   socket.on('connect-user', (userId) => {
     socket.socketid = userId;
     setChatSocket(socket.socketid, socket);
-    console.log(sockets);
+    // console.log(sockets);
   });
 
   socket.on('disconnect', () => {
@@ -42,5 +42,5 @@ io.on('connection', (socket) => {
 app.use(express.static('public'))
 
 server.listen(port, () => {
-  console.log("listeing on " + process.env.URL);
+  console.log("listening on " + process.env.URL);
 });
