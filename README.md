@@ -4,7 +4,7 @@
 ---
 
 #### How to use
-1. Open the app [here](https://private-chat-app-nodejs.herokuapp.com/")
+1. Open the app [here](https://private-chat-app-nodejs.herokuapp.com/)
 2. Open it again in another tab (or phone/pc)
 3. Set your ID (any string, say '1')
 4. Set receiver's ID (say '2')
