@@ -13,18 +13,76 @@ body{
 	text-align: center;
 }
 
-#msg {
-	height: 60px;
-	font-size: 20pt;
+input, button{
+	outline: none;
+	border: none;
+	transition: all 500ms ease;
 }
 
-#btn {
-	height: 50px;
-	font-size: 30;
+button:active{
+	transform: scale(1.05);
+	background: #ccc;
 }
 
-.inp {
-	height: 20px;
-	width: 300px;
-	margin: 10px;
+.wrapper{
+	width: 100vw;
+	position: fixed;
+	background: #fff;
+}
+
+.wrapper.top{
+	top: 0;
+}
+
+.wrapper.bottom{
+	bottom: 0em;
+}
+
+.sender,
+.receiver,
+.message,
+.chat{
+	max-width: 90vw;
+	width: 500px;
+	margin: 0.5em auto;
+}
+
+.sender,
+.receiver,
+.message{
+	display: flex;
+	gap: 10px;
+}
+
+.inp, .msg, .set_button, .send_button{
+	padding: 1em 2em;
+}
+
+.inp, .msg{
+	max-width: 100vw;
+	width: 70%;
+	background: #eee;
+}
+
+.set_button, .send_button{
+	width: 30%;	
+	background: #ddd;
+}
+
+.chats{
+	padding-block: 125px 70px;
+}
+
+.chat{
+	text-align: left;
+	padding: 0.5em 1em;
+	background: #eee
+}
+
+.chat .user{
+	font-size: 14px;
+}
+
+.chat .text{
+	font-size: 18px;
 }
